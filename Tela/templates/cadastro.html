@@ -1,0 +1,39 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/cadastro/tela.css' %}">
+    <link rel="shortcut icon" href="{% static 'image/popcorn.png' %}" type="image/x-icon">
+    <title>Should I watch?</title>
+</head>
+<body>
+{% if invalid_username %}
+<script>
+    alert("Já existe um usúario com esse username.");
+</script>
+{% endif %}
+
+{% if invalid_email %}
+<script>
+    alert("Já existe um usúario com esse email.");
+</script>
+{% endif %}
+
+{% if empty_fields %}
+  <script>
+        alert("Preencha todos os campos!!");
+  </script>
+{% endif %}
+<form action="{% url 'cadastro' %}" method="POST" id="form"> {% csrf_token %}
+    <h1>Faça seu Cadastro</h1>
+    <input type="text" name="username" class="register_form username" placeholder="Username" maxlength="20" autocomplete="on">
+    <input type="email" name="email" class="register_form email" placeholder="Ex:teste@gmail.com" autocomplete="on">
+    <input type="password" name="senha" class="register_form password" placeholder="Senha" minlength="8" autocomplete="on">
+    <button type="submit" class="register_form btn">Cadastrar</button>
+    <p>Já tem conta? <a href="/login/" id="login_check">faça seu login por aqui</a></p>
+</form>
+</body>
+</html>

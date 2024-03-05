@@ -1,0 +1,55 @@
+body{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("cinem.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+#form{
+  display:grid;
+  border-radius:1em;
+  padding:2em;
+  justify-content:center;
+  align-items: center;
+  width:28vw;
+  height:25em;
+  background-color:white;
+  opacity:95%;
+}
+
+#title{
+  margin-bottom:1em;
+  margin-top: .1em
+}
+
+.login_input{
+  padding-left:1em;
+  width: auto;
+  height: 2.7em;
+  border-radius: .35em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 1px solid black
+}
+
+.login_btn{
+  width: auto;
+  height: 2.7em;
+  border-radius: .35em;
+  background-color:#8C0303;
+  color:white;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 1px solid black
+}
+
+
+@media screen and (max-width: 900px){
+  #form{
+    width: 90vw;
+    height:26em
+  }
+}

@@ -1,0 +1,44 @@
+body{
+ display: grid;
+ font-family: "Open Sans", sans-serif;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+ background-image: url("boxOffice.jpg");
+  background-size: cover;
+   background-position: center center;
+}
+#form_recoverPass{
+ display:grid;
+border-radius:1em;
+padding:2em;
+ justify-content:center;
+ align-items: center;
+ width:auto;
+ height:20em;
+ background-color:white;
+ opacity:95%;
+}
+.password{
+padding-left:1em;
+width: auto;
+ height: 3em;
+ border-radius: .35em;
+border: 1px solid black
+}
+
+#btn-recoverPass{
+ height: 3em;
+ border-radius: .5em;
+ border: 1px solid black;
+ color:white;
+  background-color: #592529
+}
+@media screen and (max-width: 768px){
+   .password{
+   width: 77vw
+  }
+  #btn-recoverPass{
+   width: 81vw
+  }
+}

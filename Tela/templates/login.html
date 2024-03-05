@@ -1,0 +1,34 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/login/login.css' %}">
+    <link rel="shortcut icon" href="{% static 'image/popcorn.png' %}" type="image/x-icon">
+    <title>Should I watch?</title>
+</head>
+<body>
+{% if invalid_credentials %}
+<script>
+    alert("Credenciais inválidas. Por favor, tente novamente.");
+</script>
+{% endif %}
+{% if empty_fields %}
+  <script>
+        alert("Preencha todos os campos!!");
+  </script>
+{% endif %}
+<form action="{% url 'login' %}" method="POST" id="form">
+    {% csrf_token %}
+    <h3 id="title">Faça seu Login</h3>
+    <input type="text" name="username" class=" login_input username" placeholder="Usuário" autocomplete="on">
+    <input type="password" name="senha" class="login_input senha" placeholder="Senha" minlength="8" autocomplete="on">
+    <a href="{% url 'forgot_pass' %}" class="links forgot_pass">Esqueceu a senha?</a>
+    <button type="submit" class="login_btn">Cadastrar</button>
+    <p class="links">Não tem conta? <a href="/cadastro/" class="register_link">faça sua conta por aqui</a></p>
+</form>
+</body>
+</html>

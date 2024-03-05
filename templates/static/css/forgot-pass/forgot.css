@@ -1,0 +1,53 @@
+
+body{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("boxOffice.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+#form{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  gap: 2em;
+  border-radius:1em;
+  padding:2em;
+  width:auto;
+  height:15em;
+  background-color:white;
+  opacity:95%;
+}
+#username{
+  flex: 1;
+  padding-left:1em;
+  width: auto;
+  height: 2.5em;
+  border-radius: .35em;
+  border: 1px solid black
+}
+#btn_forgotPass{
+  width: 15vw;
+  height:2.5em;
+  border-radius: .35em;
+  background-color:#592529;
+  color:white;
+  border: 1px solid black
+}
+@media screen and (max-width: 600px){
+  #form{
+  height:18em;
+    width: 70vw;
+  }
+#username{
+   width: 50vw;
+   height: 3em
+  }
+  #btn_forgotPass{
+   width: 50vw;
+   height: 3em
+  }
+}

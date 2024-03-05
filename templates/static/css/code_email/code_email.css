@@ -1,0 +1,49 @@
+body{
+ display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: auto;
+ background-image: url("boxOffice.jpg");
+  background-size: cover;
+   background-position: center center;
+}
+#form_codeSend{
+ display:flex;
+ flex-direction: column;
+ gap:2em;
+ align-items:center;
+ border-radius:1em;
+ width:auto;
+ padding: 1.5em 1em 0em 1em;
+ height:15em;
+ background-color:white;
+ opacity:95%;
+}
+#input_sendCode{
+padding-left:1em;
+width: auto;
+ height: 3em;
+ border-radius: .35em;
+border: 1px solid black
+}
+#btn_sendCode{
+width: 14vw;
+ height: 3em;
+ border-radius: .35em;
+ background-color:#592529;
+ color:white;
+ border: 1px solid black
+}
+
+@media screen and (max-width: 600px){
+  #form_codeSend{
+    width: 70vw;
+    height: auto;
+  }
+  #input_sendCode{
+   width: 60vw
+  }
+  #btn_sendCode{
+   width: 60vw
+  }
+}

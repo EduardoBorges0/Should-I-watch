@@ -1,0 +1,45 @@
+.hidden {
+ display:none
+}
+#btn-options{
+ display:none;
+}
+#options-container {
+  margin-top:3em;
+  margin-left: -4em;
+  width: auto;
+  height:auto;
+  max-width: 100%;
+  background: linear-gradient(to top, #0A0C0D, #401313);
+  border-radius: 1em 0em 1em 1em;
+  border: 1px solid #0A0C0D;
+  position: absolute;
+  animation:
+}
+#logout{
+ text-decoration:none;
+}
+#options-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+#options-container li {
+text-align:center;
+  padding: 1em;
+  cursor: pointer;
+}
+
+#options-container li:hover {
+  background-color: #401313;
+   border-radius: 1em 0em 1em 1em;
+}
+@media screen and (max-width: 768px) {
+  #btn-options{
+     display:block;
+     padding-right: 2em
+  }
+
+}

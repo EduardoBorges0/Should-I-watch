@@ -1,0 +1,118 @@
+*{
+color:white;
+}
+#options{
+  display:flex;
+  flex-wrap: wrap
+}
+body{
+ margin:0;
+   font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color:#0A0C0D;
+
+}
+nav{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content: space-around;
+background: linear-gradient(to top, #0A0C0D, #401313);
+background-size: cover;
+background-position: center;
+height: 13vh
+}
+
+
+#btn-film{
+ height:4.6vh;
+ background:linear-gradient(to top, #0A0C0D, #401313);
+ border-radius: 0em 1em 1em 0em;
+  border-left: none;
+ border-right: 1px solid black;
+ border-bottom: 1px solid black;
+ border-top:1px solid black
+}
+#input-film{
+color:black;
+width: 15vw;
+ height:4.1vh;
+ padding-left: 1em;
+ border-radius: 1em 0em 0em 1em;
+ border: none;
+}
+#link_film{
+ text-decoration: none;
+
+ margin-top: 1em;
+}
+#logo, #account{
+flex: 1;
+  color:white;
+  margin-left: 1em;
+
+}
+#account{
+ margin-right: 2em
+}
+#logo{
+ font-size: 2em;
+ text-decoration: none;
+}
+#movieContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2em;
+    justify-content: space-around;
+}
+
+.movie-item {
+   display:flex;
+   gap: .5em;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+    margin: 10px;
+
+}
+.movie-item img {
+    border-radius: .5em;
+    max-height: 50vh;
+    width: 14em;
+    transition: transform 0.5s ease;
+}
+.movie-item img:hover {
+    transform: scale(1.1);
+}
+#btn-options{
+    background:none;
+    margin-right: 2em;
+    width: 9vw;
+    border:none;
+}
+
+@media screen and (max-width: 768px) {
+    .movie-item img {
+        width: 70%; /* Defina a largura como 100% apenas em telas menores que 800 pixels */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+     #input-film{
+   width: 7em;
+  }
+   #form{
+    margin-right: 1.2em
+   }
+  #logo{
+    font-size:1em;
+  }
+  #account{
+   display:none;
+  }
+  .bi-person-circle{
+ font-size: 3em
+}
+}
+
+
+

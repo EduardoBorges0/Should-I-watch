@@ -1,0 +1,22 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/forgot-pass/forgot.css' %}">
+    <link rel="shortcut icon" href="{% static 'image/popcorn.png' %}" type="image/x-icon">
+    <title>Should I watch?</title>
+</head>
+<body>
+<form action="{% url 'forgot_pass' %}" method="POST" id="form">
+    {% csrf_token %}
+    <h4>Recuperação de Senha</h4>
+    <input type="text" name="username" id="username" placeholder="Usuário" autocomplete="on">
+    <button type="submit" id="btn_forgotPass">Continuar</button>
+</form>
+</body>
+</html>

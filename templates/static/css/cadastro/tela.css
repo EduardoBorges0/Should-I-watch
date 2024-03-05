@@ -1,0 +1,46 @@
+body{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("boxOffice.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+#form{
+  display:grid;
+  border-radius:1em;
+  padding:2.5em;
+  justify-content:center;
+  align-items: center;
+  width:23vw;
+  height:24em;
+  background-color:white;
+  opacity:80%;
+}
+
+.register_form{
+  padding-left:1em;
+  margin: 1em;
+  width: auto;
+  height: 2.7em;
+  border-radius: .35em;
+  border: 1px solid black;
+}
+
+.btn{
+  background-color:#592529;
+  color:white;
+}
+
+#login_check{
+  text-decoration:none;
+}
+
+@media screen and (max-width: 900px){
+#form{
+  width: 60vw;
+  height: 27em
+  }
+}
